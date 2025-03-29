@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';  // If using Composer
-// require 'PHPMailer/PHPMailer.php';  // If manually installed
-// require 'PHPMailer/SMTP.php';
-// require 'PHPMailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';  // If manually installed
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST["name"]);
@@ -34,8 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
         echo "Message sent successfully!";
     } catch (Exception $e) {
-        echo "Error sending message: {$mail->ErrorInfo}";
-    }
+        error_log("Mail Error: {$mail->ErrorInfo}");  // Log the error
+        echo "Sorry, something went wrong. Please try again later.";
+    }    
 } else {
     echo "Invalid request.";
 }
