@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental Drywall</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="Logo.jpg" alt="Logo" class="logo-img">
+        </a>
+
+        <nav class="navbar">
+            <a href="#" style="--i:1;" class="active">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#services" style="--i:3;">Services</a>
+            <a href="#projects" style="--i:4;">Projects</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </nav>
+
+        <div class="social-media">
+            <a href="https://www.yelp.com/biz/continental-drywall-aurora-2" target="_blank" style="--i:1;"><i class='bx bxl-yelp'></i></a>
+            <a href="https://www.facebook.com/contidrywall/" target="_blank" style="--i:2;"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/albertomoralesm/" target="_blank" style="--i:3;"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+        
+    </header>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="home-content">
+            <h1>Welcome to Continental Drywall Inc.</h1>
+            <h3>Building your dreams with quality and trust.</h3>
+            <p>We are experts in not only drywall repair work, but also many other handyman projects around the
+                house. For the best service at the best price, please give us a call and let us earn your business. No
+                job is too big, and no job is too small. Please call us for a quote on all of your drywall needs.</p>
+        </div>
+
+        <div class="home-img">
+            <div class="rhombus">
+                <img src="house.png" alt="">
+            </div>
+        </div>
+
+        <div class="rhombus2"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Founded on the principles of integrity, craftsmanship, and customer satisfaction, Continental Drywall Inc has been a trusted name in the drywall industry for 22 years. Our journey began in Aurora, CO, with a mission to provide top-tier drywall services that elevate the aesthetics and functionality of residential and commercial spaces. Over the years, we've built a reputation for precision, attention to detail, and unwavering commitment to quality. At Continental Drywall Inc, we take pride in being more than just drywall installers; we are partners in your vision. Our core values of excellence, integrity, and client-centricity guide every aspect of our work. From the Business Profile of Continental Drywall Inc.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Residential Drywall</h3>
+                <p>We specialize in providing custom drywall solutions for homes of all sizes. Our team handles everything from installation to finishing.</p>
+            </div>
+            <div class="service-item">
+                <h3>Commercial Drywall</h3>
+                <p>Our commercial drywall services are designed for larger buildings and offices, providing fast and efficient installation with high-quality finishes.</p>
+            </div>
+            <div class="service-item">
+                <h3>Drywall Repair</h3>
+                <p>We offer drywall repair services to restore the look and integrity of your walls. No job is too big or small for our team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="project1.jpg" alt="Project 1">
+                <p>Residential project in Aurora, CO.</p>
+            </div>
+            <div class="project-item">
+                <img src="project2.jpg" alt="Project 2">
+                <p>Commercial office renovation.</p>
+            </div>
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3">
+                <p>Drywall installation for new apartment complex.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-info">
+            <p>Have questions or want a quote? Get in touch with us!</p>
+            <ul>
+                <li><i class="bx bx-phone"></i> +1 (720) 331-8937</li>
+                <li><i class="bx bx-envelope"></i> continentaldrywall0503@gmail.com</li>
+                <li><i class="bx bx-location-plus"></i> 14671 E 25th Ave Aurora, CO 80011</li>
+            </ul>
+        </div>
+
+        <form class="contact-form" action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>            
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".navbar a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    // Remove 'active' class from all links
+                    navLinks.forEach(nav => nav.classList.remove("active"));
+                    // Add 'active' class to the clicked link
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
